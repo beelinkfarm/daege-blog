@@ -178,6 +178,16 @@
   font-weight: 500;
 }
 
+/* Year labels in sidebar */
+.sidebar-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: rgb(var(--color-neutral-500));
+  padding: 0.25rem 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
 /* Count badges */
 .sidebar-count {
   font-family: 'JetBrains Mono', monospace;

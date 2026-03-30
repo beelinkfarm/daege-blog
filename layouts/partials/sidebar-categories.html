@@ -4,35 +4,60 @@
 {{ $tags := site.Taxonomies.tags }}
 
 <nav class="wiki-sidebar" aria-label="Category Navigation">
+  {{/* Blog Section */}}
   <div class="sidebar-section">
     <h3 class="sidebar-heading">
-      <a href="{{ "projects/" | relLangURL }}">Projects</a>
+      <a href="{{ "blog/" | relLangURL }}">Blog</a>
     </h3>
     <ul class="sidebar-list">
-      {{ range where site.RegularPages "Section" "projects" }}
-        {{ if .IsSection }}
-        <li class="sidebar-item {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      {{ end }}
-      {{ range where site.Sections "Section" "projects" }}
-        <li class="sidebar-item {{ if $.IsDescendant . }}expanded{{ end }}">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ if .Sections }}
+      {{ range (where site.RegularPages "Section" "blog").GroupByDate "2006" }}
+        <li class="sidebar-item">
+          <span class="sidebar-year">{{ .Key }}</span>
           <ul class="sidebar-sublist">
-            {{ range .Sections }}
-            <li class="sidebar-subitem {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
+            {{ range .Pages }}
+              <li class="sidebar-subitem {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
             {{ end }}
           </ul>
-          {{ end }}
         </li>
       {{ end }}
     </ul>
   </div>
 
+  {{/* Projects Section */}}
+  <div class="sidebar-section">
+    <h3 class="sidebar-heading">
+      <a href="{{ "projects/" | relLangURL }}">Projects</a>
+    </h3>
+    <ul class="sidebar-list">
+      {{ range where site.Sections "Section" "projects" }}
+        {{ range .Sections }}
+          <li class="sidebar-item {{ if or (eq $currentPage.RelPermalink .RelPermalink) ($currentPage.IsDescendant .) }}expanded{{ end }}">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ $children := .Pages }}
+            {{ if gt (len $children) 0 }}
+            <ul class="sidebar-sublist">
+              {{ range $children }}
+              <li class="sidebar-subitem {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </li>
+        {{ end }}
+        {{/* Standalone project pages (not sections) */}}
+        {{ range .RegularPages }}
+          <li class="sidebar-item {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+
+  {{/* Categories */}}
   {{ if $categories }}
   <div class="sidebar-section">
     <h3 class="sidebar-heading">
@@ -51,6 +76,7 @@
   </div>
   {{ end }}
 
+  {{/* Tags */}}
   {{ if $tags }}
   <div class="sidebar-section">
     <h3 class="sidebar-heading">
@@ -67,6 +93,7 @@
   </div>
   {{ end }}
 
+  {{/* Navigate */}}
   <div class="sidebar-section">
     <h3 class="sidebar-heading">Navigate</h3>
     <ul class="sidebar-list">
