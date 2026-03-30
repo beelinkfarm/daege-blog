@@ -1,5 +1,32 @@
 /* Wiki Layout — 3-column: left sidebar + content + right TOC */
 
+/* Widen prose in wiki layout */
+.wiki-main .prose {
+  max-width: none !important;
+}
+
+.wiki-main .article-content {
+  max-width: none !important;
+}
+
+.wiki-main .prose > * {
+  max-width: none;
+}
+
+/* Override Tailwind prose max-width (65ch default) */
+.wiki-main .prose p,
+.wiki-main .prose ul,
+.wiki-main .prose ol,
+.wiki-main .prose blockquote,
+.wiki-main .prose h1,
+.wiki-main .prose h2,
+.wiki-main .prose h3,
+.wiki-main .prose h4,
+.wiki-main .prose pre,
+.wiki-main .prose table {
+  max-width: none;
+}
+
 .wiki-layout {
   display: flex;
   gap: 0;
