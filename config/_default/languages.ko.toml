@@ -16,6 +16,6 @@ title = "대게"
   headline = "대신 개발하는 대게"
   bio = "AI 기반 도구, 웹 애플리케이션, 자동화 시스템을 설계하고 개발합니다."
   links = [
-    { github = "https://github.com/guswls" },
+    { github = "https://github.com/beelinkfarm" },
     { youtube = "https://www.youtube.com/channel/UCgCWHhuAVa16c-iNRuTEzYA" },
   ]

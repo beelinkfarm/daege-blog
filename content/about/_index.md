@@ -24,5 +24,5 @@ This site serves as both a technical blog and project portfolio. I document the 
 
 ## Connect
 
-- [GitHub](https://github.com/guswls)
+- [GitHub](https://github.com/beelinkfarm)
 - [YouTube](https://www.youtube.com/channel/UCgCWHhuAVa16c-iNRuTEzYA)

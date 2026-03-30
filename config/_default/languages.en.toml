@@ -16,6 +16,6 @@ title = "Daege"
   headline = "Building the future, one project at a time."
   bio = "I design and develop AI-powered tools, web applications, and automation systems."
   links = [
-    { github = "https://github.com/guswls" },
+    { github = "https://github.com/beelinkfarm" },
     { youtube = "https://www.youtube.com/channel/UCgCWHhuAVa16c-iNRuTEzYA" },
   ]
