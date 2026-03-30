@@ -236,3 +236,239 @@ html:not(.dark) .sidebar-tag {
   background: rgba(var(--color-neutral-200), 0.5);
   border-color: rgba(var(--color-neutral-300), 0.5);
 }
+
+/* ============================================
+   DESIGN POLISH — Dynamic & Refined
+   ============================================ */
+
+/* --- Headings: accent gradient underline --- */
+.wiki-main .prose h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(var(--color-primary-400), 0.3);
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.wiki-main .prose h3 {
+  color: rgb(var(--color-primary-300));
+  margin-top: 2rem;
+}
+
+/* --- Links: cyan with smooth underline --- */
+.wiki-main .prose a {
+  color: rgb(var(--color-primary-400));
+  text-decoration: none;
+  background-image: linear-gradient(
+    rgb(var(--color-primary-400)),
+    rgb(var(--color-primary-400))
+  );
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.2s;
+}
+
+.wiki-main .prose a:hover {
+  background-size: 100% 1px;
+  color: rgb(var(--color-primary-300));
+}
+
+/* --- Blockquotes: accent left border + subtle bg --- */
+.wiki-main .prose blockquote {
+  border-left: 3px solid rgb(var(--color-primary-400));
+  background: rgba(var(--color-primary-400), 0.05);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: normal;
+}
+
+.wiki-main .prose blockquote p {
+  color: rgb(var(--color-neutral-300));
+}
+
+html:not(.dark) .wiki-main .prose blockquote {
+  background: rgba(var(--color-primary-600), 0.05);
+}
+
+html:not(.dark) .wiki-main .prose blockquote p {
+  color: rgb(var(--color-neutral-600));
+}
+
+/* --- Code blocks: polished with glow border --- */
+.wiki-main .prose pre {
+  background: rgba(var(--color-neutral-900), 0.8) !important;
+  border: 1px solid rgba(var(--color-primary-400), 0.15);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(var(--color-primary-400), 0.05);
+}
+
+.wiki-main .prose pre:hover {
+  border-color: rgba(var(--color-primary-400), 0.3);
+  box-shadow: 0 0 30px rgba(var(--color-primary-400), 0.08);
+}
+
+html:not(.dark) .wiki-main .prose pre {
+  background: rgb(var(--color-neutral-100)) !important;
+  border-color: rgba(var(--color-neutral-300), 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Inline code: pill style --- */
+.wiki-main .prose :not(pre) > code {
+  background: rgba(var(--color-primary-400), 0.1);
+  color: rgb(var(--color-primary-300));
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+  border: 1px solid rgba(var(--color-primary-400), 0.15);
+}
+
+html:not(.dark) .wiki-main .prose :not(pre) > code {
+  background: rgba(var(--color-primary-600), 0.08);
+  color: rgb(var(--color-primary-700));
+  border-color: rgba(var(--color-primary-600), 0.15);
+}
+
+/* --- Tables: refined with hover rows --- */
+.wiki-main .prose table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(113, 113, 122, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.wiki-main .prose thead th {
+  background: rgba(var(--color-primary-400), 0.08);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid rgba(var(--color-primary-400), 0.2);
+}
+
+.wiki-main .prose tbody tr {
+  transition: background 0.15s;
+}
+
+.wiki-main .prose tbody tr:hover {
+  background: rgba(var(--color-primary-400), 0.04);
+}
+
+.wiki-main .prose td {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid rgba(113, 113, 122, 0.1);
+}
+
+/* --- Lists: custom bullets --- */
+.wiki-main .prose ul > li::marker {
+  color: rgb(var(--color-primary-400));
+}
+
+.wiki-main .prose ol > li::marker {
+  color: rgb(var(--color-primary-400));
+  font-weight: 600;
+}
+
+.wiki-main .prose li {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+
+/* --- Strong: accent color --- */
+.wiki-main .prose strong {
+  color: rgb(var(--color-neutral-100));
+  font-weight: 700;
+}
+
+html:not(.dark) .wiki-main .prose strong {
+  color: rgb(var(--color-neutral-900));
+}
+
+/* --- Horizontal rules: gradient --- */
+.wiki-main .prose hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--color-primary-400), 0.4),
+    transparent
+  );
+  margin: 2.5rem 0;
+}
+
+/* --- Images: rounded with subtle shadow --- */
+.wiki-main .prose img {
+  border-radius: 8px;
+  border: 1px solid rgba(113, 113, 122, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wiki-main .prose img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Buttons: enhanced hover --- */
+.wiki-main .prose .btn,
+.wiki-main a[class*="btn"] {
+  transition: all 0.2s ease;
+}
+
+.wiki-main .prose .btn:hover,
+.wiki-main a[class*="btn"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--color-primary-400), 0.25);
+}
+
+/* --- Scroll animation for content --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wiki-main header {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.wiki-main .article-content {
+  animation: fadeInUp 0.5s ease-out 0.1s both;
+}
+
+/* --- Selection color --- */
+.wiki-main ::selection {
+  background: rgba(var(--color-primary-400), 0.25);
+  color: rgb(var(--color-neutral-100));
+}
+
+/* --- Smooth page transitions --- */
+.wiki-main {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* --- Card hover improvements for project/blog grids --- */
+article[class*="card"],
+section a[class*="card"] {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+article[class*="card"]:hover,
+section a[class*="card"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
