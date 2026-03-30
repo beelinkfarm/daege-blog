@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="wiki-layout">
+    {{/* Left Sidebar */}}
+    <aside class="wiki-left print:hidden">
+      {{ partial "sidebar-categories.html" . }}
+    </aside>
+
+    {{/* Main Content */}}
+    <div class="wiki-main">
+      {{ $partial := print "home/" .Site.Params.homepage.layout ".html" }}
+      {{ if templates.Exists ( printf "partials/%s" $partial ) }}
+        {{ partial $partial . }}
+      {{ else }}
+        {{ partial "home/profile.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
