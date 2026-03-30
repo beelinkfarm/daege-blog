@@ -1,11 +1,13 @@
 theme = "blowfish"
-baseURL = "https://daege.dev/"
+baseURL = "https://beelinkfarm.github.io/daege-blog/"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
 enableRobotsTXT = true
 summaryLength = 30
 enableEmoji = true
+
+googleAnalytics = "G-293GLNTDLQ"
 
 [pagination]
   pagerSize = 12
