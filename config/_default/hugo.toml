@@ -1,0 +1,21 @@
+theme = "blowfish"
+baseURL = "https://daege.dev/"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+enableRobotsTXT = true
+summaryLength = 30
+enableEmoji = true
+
+[pagination]
+  pagerSize = 12
+
+[imaging]
+  anchor = 'Center'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

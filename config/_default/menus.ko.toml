@@ -1,0 +1,24 @@
+[[main]]
+  name = "블로그"
+  pageRef = "blog"
+  weight = 10
+
+[[main]]
+  name = "프로젝트"
+  pageRef = "projects"
+  weight = 20
+
+[[main]]
+  name = "소개"
+  pageRef = "about"
+  weight = 30
+
+[[footer]]
+  name = "태그"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "카테고리"
+  pageRef = "categories"
+  weight = 20

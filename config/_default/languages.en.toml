@@ -1,0 +1,21 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Daege"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "Jan 2, 2006"
+  description = "AI/IT developer blog and project portfolio. Building the future, one project at a time."
+
+[params.author]
+  name = "Daege"
+  headline = "Building the future, one project at a time."
+  bio = "I design and develop AI-powered tools, web applications, and automation systems."
+  links = [
+    { github = "https://github.com/guswls" },
+    { youtube = "https://www.youtube.com/channel/UCgCWHhuAVa16c-iNRuTEzYA" },
+  ]

@@ -1,0 +1,55 @@
+colorScheme = "daege"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+
+enableA11y = true
+enableSearch = true
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 6
+  showMoreLink = true
+  showMoreLinkDest = "/blog/"
+  cardView = true
+  cardViewScreenWidth = false
+
+[article]
+  showDate = true
+  showDateUpdated = true
+  showAuthor = false
+  showHero = true
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showPagination = true
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showWordCount = false
+  showSummary = true
+
+[list]
+  showBreadcrumbs = true
+  showTableOfContents = false
+  showTaxonomies = true
+  showSummary = true
+  groupByYear = true
+  cardView = true
+
+[taxonomy]
+  showTermCount = true
+  cardView = false
