@@ -7,6 +7,13 @@ categories: ["AI Tools"]
 weight: 1
 ---
 
+{{< button href="https://beelinkfarm.github.io/micro-tools/" target="_blank" >}}
+Live Demo
+{{< /button >}}
+{{< button href="https://github.com/beelinkfarm/micro-tools" target="_blank" >}}
+Source Code
+{{< /button >}}
+
 ## Overview
 
 An AI-powered tool that generates self-contained, single-purpose web tools from natural language descriptions. Each tool is output as a standalone HTML file — no server, no dependencies, no setup required.

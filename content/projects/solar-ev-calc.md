@@ -7,6 +7,13 @@ categories: ["Web Tools"]
 weight: 4
 ---
 
+{{< button href="https://beelinkfarm.github.io/dongili-tools/" target="_blank" >}}
+Live Demo
+{{< /button >}}
+{{< button href="https://github.com/beelinkfarm/dongili-tools" target="_blank" >}}
+Source Code
+{{< /button >}}
+
 ## Overview
 
 A comprehensive ROI calculator for solar panel installations combined with electric vehicle charging. Uses location-based data to provide accurate cost estimates and payback period calculations.

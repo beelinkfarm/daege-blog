@@ -7,6 +7,13 @@ categories: ["AI Tools"]
 weight: 2
 ---
 
+{{< button href="https://beelinkfarm.github.io/dongili-tools/" target="_blank" >}}
+Live Demo
+{{< /button >}}
+{{< button href="https://github.com/beelinkfarm/dongili-tools" target="_blank" >}}
+Source Code
+{{< /button >}}
+
 ## Overview
 
 An AI-driven autonomous system designed to identify market demands and automatically generate tools to meet them. Combines demand analysis with automated tool creation for a self-sustaining revenue pipeline.
