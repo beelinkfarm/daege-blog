@@ -1,0 +1,78 @@
+{{/* Wiki-style left sidebar with category navigation */}}
+{{ $currentPage := . }}
+{{ $categories := site.Taxonomies.categories }}
+{{ $tags := site.Taxonomies.tags }}
+
+<nav class="wiki-sidebar" aria-label="Category Navigation">
+  <div class="sidebar-section">
+    <h3 class="sidebar-heading">
+      <a href="{{ "projects/" | relLangURL }}">Projects</a>
+    </h3>
+    <ul class="sidebar-list">
+      {{ range where site.RegularPages "Section" "projects" }}
+        {{ if .IsSection }}
+        <li class="sidebar-item {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+      {{ range where site.Sections "Section" "projects" }}
+        <li class="sidebar-item {{ if $.IsDescendant . }}expanded{{ end }}">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ if .Sections }}
+          <ul class="sidebar-sublist">
+            {{ range .Sections }}
+            <li class="sidebar-subitem {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ if $categories }}
+  <div class="sidebar-section">
+    <h3 class="sidebar-heading">
+      <a href="{{ "categories/" | relLangURL }}">Categories</a>
+    </h3>
+    <ul class="sidebar-list">
+      {{ range $name, $pages := $categories }}
+        <li class="sidebar-item {{ if and $currentPage.Params.categories (in $currentPage.Params.categories $name) }}active{{ end }}">
+          <a href="{{ printf "categories/%s/" (urlize $name) | relLangURL }}">
+            {{ $name }}
+            <span class="sidebar-count">{{ len $pages }}</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{ if $tags }}
+  <div class="sidebar-section">
+    <h3 class="sidebar-heading">
+      <a href="{{ "tags/" | relLangURL }}">Tags</a>
+    </h3>
+    <div class="sidebar-tags">
+      {{ range $name, $pages := $tags }}
+        <a href="{{ printf "tags/%s/" (urlize $name) | relLangURL }}"
+           class="sidebar-tag {{ if and $currentPage.Params.tags (in $currentPage.Params.tags $name) }}active{{ end }}">
+          {{ $name }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="sidebar-section">
+    <h3 class="sidebar-heading">Navigate</h3>
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><a href="{{ "blog/" | relLangURL }}">All Posts</a></li>
+      <li class="sidebar-item"><a href="{{ "projects/" | relLangURL }}">All Projects</a></li>
+      <li class="sidebar-item"><a href="{{ "about/" | relLangURL }}">About</a></li>
+    </ul>
+  </div>
+</nav>
