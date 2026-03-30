@@ -5,6 +5,7 @@ summary: "A suite of free business calculators — AI cost optimization, automat
 tags: ["AI", "Automation", "Python", "Business"]
 categories: ["AI Tools"]
 weight: 1
+showTableOfContents: true
 ---
 
 {{< button href="https://beelinkfarm.github.io/dongili-tools/" target="_blank" >}}

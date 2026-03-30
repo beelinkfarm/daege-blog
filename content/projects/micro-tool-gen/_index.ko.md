@@ -5,6 +5,7 @@ summary: "자연어로 단일 목적 웹 도구를 자동 생성하는 AI 팩토
 tags: ["AI", "Claude API", "Python", "n8n"]
 categories: ["AI 도구"]
 weight: 2
+showTableOfContents: true
 ---
 
 {{< button href="https://beelinkfarm.github.io/micro-tools/" target="_blank" >}}

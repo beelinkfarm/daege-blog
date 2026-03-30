@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "AI/IT developer building tools that make complex things simple."
-showTableOfContents: false
+showTableOfContents: true
 ---
 
 ## Who I Am

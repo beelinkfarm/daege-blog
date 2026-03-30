@@ -5,6 +5,7 @@ summary: "AI-powered factory that creates single-purpose web tools from natural 
 tags: ["AI", "Claude API", "Python", "n8n"]
 categories: ["AI Tools"]
 weight: 2
+showTableOfContents: true
 ---
 
 {{< button href="https://beelinkfarm.github.io/micro-tools/" target="_blank" >}}

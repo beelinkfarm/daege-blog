@@ -1,7 +1,7 @@
 ---
 title: "소개"
 description: "복잡한 것을 간단하게 만드는 AI/IT 개발자."
-showTableOfContents: false
+showTableOfContents: true
 ---
 
 ## 소개
